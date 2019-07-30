@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="320dp"
+    android:minHeight="460dp"
+    android:background="@android:color/white">
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal" />
+
+    <WebView
+        android:id="@+id/wv_show_url"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    </WebView>
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/small_gap"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+        android:textColor="@color/colorAccent"/>
+</LinearLayout>
