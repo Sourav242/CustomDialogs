@@ -10,6 +10,6 @@ public class DialogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog);
-        //new NormalDialog(this).setTitle("Hello").setMessage("Hello message").show();
+        new NormalDialog(this).setTitle("Hello").setMessage("Hello message").show();
     }
 }
