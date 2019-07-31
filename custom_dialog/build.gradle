@@ -1,10 +1,10 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply from: '../mavenpush.gradle'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.gitlab.Sourav242.customdialogs"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -21,15 +21,25 @@ android {
         sourceCompatibility = '1.8'
         targetCompatibility = '1.8'
     }
+    lintOptions {
+        abortOnError false
+    }
+
+    resourcePrefix 'custom_dialog_'
+
+    sourceSets.main {
+        jni.srcDirs = []
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'com.google.android.material:material:1.0.0'
-    //implementation fileTree(include: ['*.aar'], dir: 'libs')
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+repositories {
+    google()
 }
