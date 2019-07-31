@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="huge_gap">32dp</dimen>
-    <dimen name="small_gap">8dp</dimen>
+    <dimen name="custom_dialog_activity_horizontal_margin">16dp</dimen>
+    <dimen name="custom_dialog_huge_gap">32dp</dimen>
+    <dimen name="custom_dialog_small_gap">8dp</dimen>
 </resources>

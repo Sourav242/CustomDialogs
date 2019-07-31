@@ -157,7 +157,7 @@ public class NormalImageDialog extends DialogBase {
     }
 
     public NormalImageDialog setOkButton(final DialogButtonClickListener listener) {
-        return setOkButton(this.context.getResources().getString(R.string.ok), listener);
+        return setOkButton(this.context.getResources().getString(R.string.custom_dialog_ok), listener);
     }
 
     public NormalImageDialog setOkButton(String btnName, final DialogButtonClickListener listener) {
