@@ -13,8 +13,8 @@ buildscript {
         // in the individual module build.gradle files
     }
     ext {
-        support = '28.0.0'
-        constraints = '1.0.2'
+        support = '29.0.0'
+        constraints = '1.1.3'
     }
 }
 
