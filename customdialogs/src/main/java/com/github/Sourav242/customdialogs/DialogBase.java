@@ -9,8 +9,6 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.gitlab.Sourav242.customdialogs.R;
-
 /**
  * Created by Sourav242 on 22-03-2018.
  */
