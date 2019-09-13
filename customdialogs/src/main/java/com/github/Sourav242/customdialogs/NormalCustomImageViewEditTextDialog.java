@@ -169,24 +169,22 @@ public class NormalCustomImageViewEditTextDialog extends DialogBase {
         return this;
     }
 
-    public NormalCustomImageViewEditTextDialog setOkButton(final DialogButtonClickListener listener) {
+    public NormalCustomImageViewEditTextDialog setOkButton(final DialogButtonClickTextListener listener) {
         return setOkButton(this.context.getResources().getString(R.string.custom_dialog_ok), listener);
     }
 
-    public NormalCustomImageViewEditTextDialog setOkButton(String btnName, final DialogButtonClickListener listener) {
+    public NormalCustomImageViewEditTextDialog setOkButton(String btnName, final DialogButtonClickTextListener listener) {
         btn_container.setVisibility(View.VISIBLE);
         dialog_ok.setText(btnName);
         dialog_ok.setVisibility(View.VISIBLE);
         dialog_ok.setOnClickListener(view -> {
             dialog.dismiss();
-            listener.onClick(dialog);
-
+            listener.onClick(dialog, et_text.getText().toString());
         });
         return this;
     }
 
     private void initializeOkCancel() {
-
         dialog_ok = dialog.findViewById(R.id.dialog_ok);
         dialog_cancel = dialog.findViewById(R.id.dialog_cancel);
 
@@ -197,9 +195,6 @@ public class NormalCustomImageViewEditTextDialog extends DialogBase {
     }
 
     public NormalCustomImageViewEditTextDialog setCancelable(boolean bool) {
-        if(!bool) {
-            btn_container.setVisibility(View.GONE);
-        }
         dialog.setCancelable(bool);
         return this;
     }

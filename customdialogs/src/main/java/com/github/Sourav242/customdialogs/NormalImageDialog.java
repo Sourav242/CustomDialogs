@@ -182,9 +182,6 @@ public class NormalImageDialog extends DialogBase {
     }
 
     public NormalImageDialog setCancelable(boolean bool) {
-        if(!bool) {
-            btn_container.setVisibility(View.GONE);
-        }
         dialog.setCancelable(bool);
         return this;
     }
