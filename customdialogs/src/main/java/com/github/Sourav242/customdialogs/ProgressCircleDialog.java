@@ -32,6 +32,7 @@ public class ProgressCircleDialog extends DialogBase {
     }
     public ProgressCircleDialog setMessage(String msg) {
         dialog_message.setText(msg);
+        dialog_message.setVisibility(View.VISIBLE);
         return this;
     }
 
